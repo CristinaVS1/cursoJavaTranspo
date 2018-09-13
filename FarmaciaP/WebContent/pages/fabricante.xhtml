@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	template="/templates/modeloSistema.xhtml">
+
+	<ui:define name="menu">
+		<ui:include src="/include/menuPrincipal.xhtml" />
+	</ui:define>
+
+	<ui:define name="conteudo">
+
+		<p:dataTable emptyMessage="Nenhum registro encontrado"
+			value="#{MBFabricante.itens}" var="item" rows="5" paginator="true">
+			<f:facet name="header">
+             Fabricante listagem
+             </f:facet>
+			<p:column headerText="Código" sortBy="#{item.codigo}">
+				<h:outputText value="#{item.codigo}" />
+			</p:column>
+			<p:column headerText="Descrição" sortBy="#{item.codigo}">
+				<h:outputText value="#{item.descricao}" />
+			</p:column>
+
+			<f:facet name="footer">
+				<p:commandButton value="Novo" actionListener="#{MBFabricante.prepararNovo}" />
+			</f:facet>
+
+		</p:dataTable>
+
+		<p:dialog>
+			<h:panelGrid columns="2">
+
+				<h:outputLabel value="Descrição" />
+				<h:inputText maxlength="50" size="30" />
+			</h:panelGrid>
+		</p:dialog>
+
+
+
+
+	</ui:define>
+
+</ui:composition>

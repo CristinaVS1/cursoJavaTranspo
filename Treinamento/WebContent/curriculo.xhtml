@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Cadastro para seleção de funcionarios</title>
+</h:head>
+<h:body>
+	<h:form>
+		
+		<h:panelGrid>
+
+			<h:outputText value="Nome Completo" />
+			<h:inputText maxlength="250" size="30" />
+
+			<h:outputText value="Endereço" />
+			<h:inputText maxlength="300" size="30" />
+
+		</h:panelGrid>
+
+		<h:panelGrid columns="4">
+
+			<h:outputText value="Bairro" />
+			<h:inputText maxlength="50" size="20" />
+
+			<h:outputText value="Telefone" />
+			<h:inputText maxlength="50" size="20" />
+
+			<h:outputText value="E-mail" />
+			<h:inputText maxlength="50" size="20" />
+
+			<h:outputText value="Site" />
+			<h:inputText maxlength="50" size="20" />
+
+		</h:panelGrid>
+
+		<h:panelGrid columns="4">
+
+			<h:outputText value="CEP" />
+			<h:inputText maxlength="20" size="20" />
+
+			<h:outputText value="Cidade" />
+			<h:inputText maxlength="20" size="20" />
+
+			<h:outputText value="Estado" />
+			<h:inputText maxlength="20" size="20" />
+		</h:panelGrid>
+		<h:panelGrid columns="4">
+
+			<h:outputText value="Naturalidade" />
+			<h:inputText maxlength="20" size="20" />
+
+			<h:outputText value="Nacionalidade" />
+			<h:inputText maxlength="20" size="20" />
+
+
+
+		</h:panelGrid>
+
+		<h:panelGrid columns="4">
+
+			<h:outputText value="Data de nascimento" />
+			<h:inputText maxlength="20" size="20" />
+
+			<h:outputText value="Estado civil" />
+			<h:inputText maxlength="20" size="20" />
+
+			<h:outputText value="CPF" />
+			<h:inputText maxlength="20" size="20" />
+
+			<h:outputText value="Carteira de habilitação" />
+			<h:inputText maxlength="20" size="20" />
+
+			<h:outputText value="Categoria" />
+			<h:inputText maxlength="20" size="20" />
+
+
+		</h:panelGrid>
+
+
+
+
+		<h:panelGrid columns="4">
+
+			<h:outputText value="Identidade" />
+			<h:inputText maxlength="20" size="20" />
+
+			<h:outputText value="Cart. Profissional" />
+			<h:inputText maxlength="20" size="20" />
+
+			<h:outputText value="Série" />
+			<h:inputText maxlength="20" size="20" />
+		</h:panelGrid>
+
+		<h:panelGrid columns="4">
+			<h:outputText value="Carteira de Reservista" />
+			<h:inputText maxlength="20" size="20" />
+
+			<h:outputText value="Título de eleitor" />
+			<h:inputText maxlength="20" size="20" />
+
+			<h:outputText value="Zona" />
+			<h:inputText maxlength="20" size="20" />
+
+		</h:panelGrid>
+		
+		<h:panelGrid columns="1">
+		
+		
+		<h:commandButton value="Salvar cadastro" action="salvarcurriculo"/>
+		
+		
+		
+		</h:panelGrid>
+
+	</h:form>
+</h:body>
+</html>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	template="/templates/modeloSistema.xhtml">
+
+	<ui:define name="conteudo">
+
+		<p:dataTable emptyMessage="Nenhum registro encontrado"
+			value="#{MBFabricaUser.itensTodosUsuarios}" var="item" rows="5">
+			<f:facet name="header">
+             Usuario Listagem
+             </f:facet>
+			<p:column headerText="Nome" sortBy="#{item.nome}">
+				<h:outputText value="#{item.nome}" />
+			</p:column>
+			<p:column headerText="Sobrenome" sortBy="#{item.sobrenome}">
+				<h:outputText value="#{item.sobrenome}" />
+			</p:column>
+
+			<p:column headerText="User" sortBy="#{item.user}">
+				<h:outputText value="#{item.user}" />
+			</p:column>
+
+			<p:column headerText="Password" sortBy="#{item.password}">
+				<h:outputText value="#{item.password}" />
+			</p:column>
+
+			<p:column headerText="SuperUser" sortBy="#{item.superUser}">
+				<h:outputText value="#{item.superUser}" />
+			</p:column>
+
+
+		</p:dataTable>
+
+
+	</ui:define>
+
+	</ui:composition>

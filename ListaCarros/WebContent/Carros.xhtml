@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	template="/templates/modeloSistema.xhtml">
+
+	<ui:define name="conteudo">
+
+		<p:dataTable emptyMessage="Nenhum registro encontrado"
+			value="#{MBProvaCarro}" var="item" rows="10">
+			<f:facet name="header">
+             Carro Lista
+             </f:facet>
+
+
+			<p:column headerText="Nome" sortBy="#{item.nome}">
+				<h:outputText value="#{item.nome}" />
+			</p:column>
+
+			<p:column headerText="Marca" sortBy="#{item.marca}">
+				<h:outputText value="#{item.marca}" />
+			</p:column>
+
+			<p:column headerText="Ano" sortBy="#{item.ano}">
+				<h:outputText value="#{item.ano}" />
+			</p:column>
+
+			<p:column headerText="Quantidade de Portas"
+				sortBy="#{item.qtd_portas}">
+				<h:outputText value="#{item.qtd_portas}" />
+			</p:column>
+
+			<p:column headerText="Preço" sortBy="#{item.preco}">
+				<h:outputText value="#{item.preco}" />
+			</p:column>
+
+
+
+
+		</p:dataTable>
+
+
+	</ui:define>
+
+
+
+</ui:composition>

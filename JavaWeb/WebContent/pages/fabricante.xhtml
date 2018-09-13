@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	template="/templates/modeloSistema.xhtml">
+
+	<ui:define name="conteudo">
+
+		<p:dataTable emptyMessage="Nenhum registro encontrado"
+			value="#{MBCliente.itensTodosClientes}" var="item" rows="5" >
+			<f:facet name="header">
+             Cliente Listagem
+             </f:facet>
+			<p:column headerText="Nome" sortBy="#{item.nome}">
+				<h:outputText value="#{item.nome}" />
+			</p:column>
+			<p:column headerText="Sobrenome" sortBy="#{item.sobrenome}">
+				<h:outputText value="#{item.sobrenome}" />
+			</p:column>
+			
+			<p:column headerText="Idade" sortBy="#{item.idade}">
+				<h:outputText value="#{item.idade}" />
+			</p:column>
+            
+            <p:column headerText="CPF" sortBy="#{item.cpf}">
+				<h:outputText value="#{item.cpf}" />
+			</p:column>
+			
+			<p:column headerText="Rua" sortBy="#{item.endereco.rua}">
+				<h:outputText value="#{item.endereco.rua}" />
+			</p:column>
+			
+			<p:column headerText="Número" sortBy="#{item.endereco.numero}">
+				<h:outputText value="#{item.endereco.numero}" />
+			</p:column>
+			
+			<p:column headerText="Bairro" sortBy="#{item.endereco.bairro}">
+				<h:outputText value="#{item.endereco.bairro}" />
+			</p:column>
+			
+			<p:column headerText="Cidade" sortBy="#{item.endereco.cidade}">
+				<h:outputText value="#{item.endereco.cidade}" />
+			</p:column>
+			
+			<p:column headerText="Uf" sortBy="#{item.endereco.uf}">
+				<h:outputText value="#{item.endereco.uf}" />
+			</p:column>
+			
+			<p:column headerText="Ativo" sortBy="#{item.ativo}">
+				<h:outputText value="#{item.ativo}" />
+			</p:column>
+			
+			
+			
+		</p:dataTable>
+
+		
+	</ui:define>
+
+</ui:composition>

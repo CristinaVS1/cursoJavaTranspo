@@ -1,3 +1,10 @@
+
+#workspace
+.metadata
+.recommenders
+RemoteSystemsTempFiles
+bin
+
 # Compiled class file
 *.class
 
